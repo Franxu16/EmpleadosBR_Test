@@ -108,4 +108,10 @@ public class EmpleadoBRTest {
     void testCalcularSalarioBruto10(){
         assertEquals(-1.0f, EmpleadoBR.calcularSalarioBruto(TipoEmpleado.vendedor, 1500.0f, -1.0f));
     }
+
+    //Quinto commit de la práctica
+    @Test
+    void testCalcularSalarioBruto11(){
+        assertEquals(-1.0f, EmpleadoBR.calcularSalarioBruto(null, 1500.0f, 8.0f));
+    }
 }
