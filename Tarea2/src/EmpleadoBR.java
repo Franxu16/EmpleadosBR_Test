@@ -9,8 +9,8 @@ public class EmpleadoBR {
         if(tipo.equals(TipoEmpleado.vendedor)) salarioB = 1000;
         else if(tipo.equals(TipoEmpleado.encargado)) salarioB = 1500;
 
-        if(ventasMes >= 1000) prima = 100;
-        else if(ventasMes <= 1500) prima = 200;
+        if(ventasMes >= 1000 && ventasMes < 1500) prima = 100;
+        else if(ventasMes >= 1500) prima = 200;
 
         return salarioB + prima + (horasExtra * 20);
     }

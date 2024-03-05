@@ -1,5 +1,6 @@
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTimeoutPreemptively;
 
 public class EmpleadoBRTest {
     //Primer commit de la práctica
@@ -54,5 +55,31 @@ public class EmpleadoBRTest {
     @Test
     void testCalcularSalarioNesto9(){
         assertEquals(-1, EmpleadoBR.calcularSalarioNeto(-1));
+    }
+
+    //Tercer commit de la práctica
+    @Test
+    void testCalcularSalarioBruto1(){
+        assertEquals(1360.0f, EmpleadoBR.calcularSalarioBruto(TipoEmpleado.vendedor, 2000.0f, 8.0f));
+    }
+
+    @Test
+    void testCalcularSalarioBruto2(){
+        assertEquals(1260.0f, EmpleadoBR.calcularSalarioBruto(TipoEmpleado.vendedor, 1500.0f, 3.0f));
+    }
+
+    @Test
+    void testCalcularSalarioBruto3(){
+        assertEquals(1100.0f, EmpleadoBR.calcularSalarioBruto(TipoEmpleado.vendedor, 1499.99f, 0.0f));
+    }
+
+    @Test
+    void testCalcularSalarioBruto4(){
+        assertEquals(1760.0f, EmpleadoBR.calcularSalarioBruto(TipoEmpleado.encargado, 1250.0f, 8.0f));
+    }
+
+    @Test
+    void testCalcularSalarioBruto5(){
+        assertEquals(1600.0f, EmpleadoBR.calcularSalarioBruto(TipoEmpleado.encargado, 1000.0, 0.0f));
     }
 }
